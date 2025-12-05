@@ -1,0 +1,29 @@
+path: D:\\AlgoData\\Trains\\try
+samples_path: PSL\\Big_images
+xlms_path: PSL\\Big_annotations
+backup: backup
+
+data_name: PSL_YOLO_V8
+train: PSL\\PSL_YOLO_V8\\images\\train
+val: PSL\\PSL_YOLO_V8\\images\\val
+test: # test images (optional)
+dataset_types: ['train', 'val']
+dataset_ratio: [0.9, 0.1]
+batch_size: 80
+img_size: 640
+max_epoch: 100
+
+addedbackground: False
+init_lr: 0.008   # init learning rate 0.1 0.01   0.001   0.0001
+final_lr: 0.01     # final learning rate = final_lr *  init_l
+methods: 0   # 0 1 2 3
+resume: False   # True or False
+MST: False
+#pretrain_weight: F:\\AlgoData\\Trains\\Recipe_ym\\XM_ADC\\train_20250906_170636\\weights\\best.pt
+#pretrain_weight: F:\\AlgoData\\Trains\\Recipe_ym\\ultralytics\\cfg\\yolov10n-MultiSEAMHead.yaml
+pretrain_weight: D:\\AlgoData\\Trains\\try\\V8\cfg\\models\\v8\\yolov8s_DW_swin_FOCUS-3.yaml
+
+
+
+names:
+  0: abnormal
